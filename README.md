@@ -1,5 +1,4 @@
-# Exercicio Banco
-## Padrões de Projeto de Software
+# Exercicio Banco - Padrões de Projeto de Software
 
 ## Membros do Grupo
 Lorene Zorzetto Carniel - RA: 842401 \
