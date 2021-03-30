@@ -1,29 +1,30 @@
 package banco;
+import java.sql.*;
 
 public class MongodbDAOFactory extends DAOFactory{
+    //Verificar
+    public static final String DBURL= "jdbc:mongodb://localhost/contas";
 
-    @Override
+    public static Connection getConnection() {
+        try {
+            String username = "lagi";
+            String password = "lagi";
+            return DriverManager.getConnection(DBURL,username,password);
+        } catch (Exception e) {
+            e.getMessage();
+        }
+        return null;
+    }
     public ClienteDAO getClienteDAO() {
-        // TODO Auto-generated method stub
-        return null;
+        return new MysqlClienteDAO();
     }
-
-    @Override
     public ContaDAO getContaDAO() {
-        // TODO Auto-generated method stub
-        return null;
+        return new MysqlContaDAO();
     }
-
-    @Override
     public ContaCorrenteDAO getContaCorrenteDAO() {
-        // TODO Auto-generated method stub
-        return null;
+        return new MysqlContaCorrenteDAO();
     }
-
-    @Override
     public ContaPoupancaDAO getContaPoupancaDAO() {
-        // TODO Auto-generated method stub
-        return null;
+        return new MysqlContaPoupancaDAO();
     }
-    
 }
