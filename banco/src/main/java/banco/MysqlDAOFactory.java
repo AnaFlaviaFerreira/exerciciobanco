@@ -2,14 +2,13 @@ package banco;
 import java.sql.*;
 
 public class MysqlDAOFactory extends DAOFactory{
-    public static final String DRIVER= "com.mysql.jdbc.Driver";
     public static final String DBURL= "jdbc:mysql://localhost/contas";
 
-    public static Connection createConnection() {
+    public static Connection getConnection() {
         try {
             String username = "lagi";
             String password = "lagi";
-            return DRIVER.createConnection(DBURL, username, password);
+            return DriverManager.getConnection(DBURL,username,password);
         } catch (Exception e) {
             e.getMessage();
         }
