@@ -1,9 +1,6 @@
 package banco;
 import java.sql.SQLException;
-import java.util.List;
 import java.util.Scanner;
-
-import javax.swing.JOptionPane;
 
 public class App 
 {
@@ -48,7 +45,8 @@ public class App
                     break;
     
                 case 7:
-                    System.out.println( "7 - Sair" );
+                    System.out.println( "Saindo" );
+                    System.exit(0);
                     break;
             
                 default:
