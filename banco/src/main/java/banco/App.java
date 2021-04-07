@@ -2,10 +2,15 @@ package banco;
 import java.sql.SQLException;
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class App 
 {
     public static void main( String[] args ) throws SQLException
     {
+        //chamando o banco mysql de cada tabela
+        MysqlClienteDAO Mysqlcliente = new MysqlClienteDAO();
+
         int op;
         Scanner leitor = new Scanner(System.in);
         do{
@@ -21,7 +26,10 @@ public class App
             op = leitor.nextInt();
             switch (op) {
                 case 1:
-                    
+                    String nome = JOptionPane.showInputDialog(null, "Digite o nome:");
+                    String dataNascimento = JOptionPane.showInputDialog(null, "Digite o sobrenome:");
+                    Cliente cli = new Cliente(nome,dataNascimento);
+                    Mysqlcliente.insert(cli);
                     break;
     
                 case 2:

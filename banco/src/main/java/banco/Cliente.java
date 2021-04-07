@@ -3,6 +3,12 @@ package banco;
 public class Cliente implements java.io.Serializable{
     private String nome;
     private String dataNascimento;
+
+    public Cliente(String nome, String dataNascimento) {
+        this.nome = nome;
+        this.dataNascimento = dataNascimento;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -19,4 +25,5 @@ public class Cliente implements java.io.Serializable{
     public String toString() {
         return "Cleinet [nome=" + nome + " - data nascimento=" + dataNascimento +"]";
     }
+    
 }
