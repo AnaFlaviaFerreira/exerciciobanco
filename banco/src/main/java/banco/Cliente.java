@@ -1,6 +1,6 @@
 package banco;
 
-public class Cliente {
+public class Cliente implements java.io.Serializable{
     private String nome;
     private String dataNascimento;
     public String getNome() {
